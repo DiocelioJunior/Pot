@@ -264,20 +264,3 @@ body {
     color: var(--text-dark);
     width: 30%;
 }
-
-
-
-
-@media (max-width: 600px) {
-    .container {
-        padding: 0px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-}
