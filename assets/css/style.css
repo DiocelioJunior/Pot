@@ -65,7 +65,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     background: transparent !important; 
     z-index: 1000; 
     padding: 10px 20px;
@@ -100,11 +100,12 @@ body {
     height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-color: #27272746;
 }
 
 .description-bottom{
-    width: 85%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: center;
