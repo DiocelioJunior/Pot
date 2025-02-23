@@ -57,16 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // 🔹 Exibe os modelos na tela
 function mostrarModelos(modelos) {
     const container = document.getElementById("model-container");
-    container.innerHTML = ""; // Limpa o container antes de adicionar os modelos
 
     if (modelos.length === 0) {
-        container.innerHTML = `<p class="no-results">Nenhum modelo encontrado.</p>`;
+        container.innerHTML = `<p>Nenhum modelo encontrado.</p>`;
         return;
     }
 
-    container.innerHTML = `<div class="reels-container" style="width: 100%;">
+    container.innerHTML = `<div class="reels-container">
         ${modelos.map(modelo => `
-            <div class="reel" style="background-image: url('${modelo.main_photo}'); width: 100%;">
+            <div class="reel" style="background-image: url('${modelo.main_photo}');">
                 <div class="container-top">
                     <div class="header">
                         <h1>Potö</h1>
@@ -94,7 +93,6 @@ function mostrarModelos(modelos) {
     aplicarEstilosReels();
     adicionarEventosNavbar();
 }
-
 
 // 🔹 Adiciona eventos aos botões do navbar
 function adicionarEventosNavbar() {
@@ -144,7 +142,7 @@ function aplicarEstilosReels() {
 
         document.querySelectorAll(".reel").forEach(reel => {
             reel.style.cssText += `
-                width: 100vh;
+                width: 100%;
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
