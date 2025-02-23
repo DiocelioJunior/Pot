@@ -2,53 +2,65 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Meta tags básicas -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <!-- LINK CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Potö - Descubra e compartilhe experiências incríveis com nossos reels personalizados.">
+    <meta name="keywords" content="Potö, reels, filtros, compartilhamento, experiências">
+    <meta name="author" content="Potö">
     
-    <!-- ICONS GOOGLE -->
+    <!-- Ícone para a barra de navegação e links de compartilhamento -->
+    <link rel="icon" href="./assets/image/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/image/icon.png">
+    
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="./assets/css/reels.css">
+    
+    <!-- Ícones do Google Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle,chat,favorite,filter_alt,keyboard_arrow_down,location_on" />
     
-    <title>Potö</title>
+    <!-- Título da página -->
+    <title>Potö - Descubra e Compartilhe Experiências</title>
 </head>
 
 <body>
     <div class="container">
-        <!-- Aqui será injetado o conteúdo dinâmico via JS -->
-        <div class="reels-container" id="model-container"></div>
-        <!--Filtros-->
-        <div class="container-filter" id="container-filter" style="display: none;">
+        <!-- Container para o conteúdo dinâmico dos reels -->
+        <div class="reels-container" id="model-container" aria-label="Container de reels"></div>
+        
+        <!-- Container para os filtros -->
+        <div class="container-filter" id="container-filter" style="display: none;" aria-label="Filtros de pesquisa">
             <div class="filter">
-                <form id="filter-form">
+                <form id="filter-form" aria-label="Formulário de filtros">
                     <div class="line">
                         <h1></h1>
                     </div>
 
-                    <!--Filtro de Cidade/Pais-->
+                    <!-- Filtro de Cidade/País -->
                     <div class="filter-input-container">
                         <div class="filer-input">
                             <label for="filter-city">Cidade</label>
-                            <select id="filter-city">
+                            <select id="filter-city" aria-label="Filtrar por cidade">
                                 <option value="">Todas</option>
                             </select>
                         </div>
                         <hr>
                         <div class="filer-input">
                             <label for="filter-country">País</label>
-                            <select id="filter-country">
+                            <select id="filter-country" aria-label="Filtrar por país">
                                 <option value="">Todos</option>
                             </select>
                         </div>
                     </div>
 
-                    <!--Filtro de Genero-->
+                    <!-- Filtro de Gênero -->
                     <div class="filter-input-container sm">
                         <div class="filer-input">
                             <label for="filter-gender">Gênero:</label>
-                            <select id="filter-gender">
+                            <select id="filter-gender" aria-label="Filtrar por gênero">
                                 <option value="">Todos</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Feminino">Feminino</option>
@@ -57,23 +69,22 @@
                         </div>
                     </div>
                     
-                    <!--Filtro Idade-->
+                    <!-- Filtro de Idade -->
                     <div class="filter-input-container">
                         <div class="filer-input">
                             <label for="filter-min-age">Idade Mínima:</label>
-                            <input type="number" id="filter-min-age" value="18" min="18"  max="65">
+                            <input type="number" id="filter-min-age" value="18" min="18" max="65" aria-label="Idade mínima">
                         </div>
                         <hr>
                         <div class="filer-input">
                             <label for="filter-max-age">Idade Máxima:</label>
-                            <input type="number" id="filter-max-age" value="65" min="18" max="65">
+                            <input type="number" id="filter-max-age" value="65" min="18" max="65" aria-label="Idade máxima">
                         </div>
                     </div>
             
-            
-                    <button type="submit">Filtrar</button>
+                    <!-- Botão de submissão do formulário -->
+                    <button type="submit" aria-label="Aplicar filtros">Filtrar</button>
                 </form>
-                
             </div>
         </div>
     </div>

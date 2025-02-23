@@ -1,7 +1,8 @@
 {
     "models": [
         {
-            "username": "@luffy_model",
+            "id": 1,
+            "username": "@luffy_mose",
             "full_name": "Monkey D. Luffy",
             "password": "hashed_password_1234",
             "birth_date": "1997-05-05",
@@ -59,6 +60,7 @@
             "created_at": "2025-02-20 17:15:00"
         },
         {
+            "id": 2,
             "username": "@zoro_model",
             "full_name": "Roronoa Zoro",
             "password": "hashed_password_5678",
@@ -69,7 +71,7 @@
             "phone": "+81 90 1234 5678",
             "email": "zoro.model@email.com",
             "address": "Rua da Espada, 2, Tokyo, Japão",
-            "city": "Tokyo",
+            "city": "??? ",
             "languages": "Japonês, Inglês",
             "personal_extra": "Interessado em artes marciais e treinamento físico.",
             "about_me": "Sou um modelo e praticante de artes marciais, buscando sempre superar meus limites e alcançar a excelência.",
@@ -117,6 +119,7 @@
             "created_at": "2025-02-20 17:30:00"
         },
         {
+            "id": 3,
             "username": "@nami_model",
             "full_name": "Nami",
             "password": "hashed_password_9101",
@@ -175,6 +178,7 @@
             "created_at": "2025-02-20 17:45:00"
         },
         {
+            "id": 4,
             "username": "@sanji_model",
             "full_name": "Sanji Vinsmoke",
             "password": "hashed_password_1121",
@@ -233,6 +237,7 @@
             "created_at": "2025-02-20 18:00:00"
         },
         {
+            "id": 5,
             "username": "@sakura_model",
             "full_name": "Sakura Haruno",
             "password": "hashed_password_789",
@@ -291,6 +296,7 @@
             "created_at": "2025-02-20 15:00:00"
         },
         {
+            "id": 6,
             "username": "@naruto_model",
             "full_name": "Naruto Uzumaki",
             "password": "hashed_password_101",
@@ -349,6 +355,7 @@
             "created_at": "2025-02-20 15:15:00"
         },
         {
+            "id": 7,
             "username": "@hinata_model",
             "full_name": "Hinata Hyuga",
             "password": "hashed_password_112",
@@ -407,6 +414,7 @@
             "created_at": "2025-02-20 15:30:00"
         },
         {
+            "id": 8,
             "username": "@sasuke_model",
             "full_name": "Sasuke Uchiha",
             "password": "hashed_password_131",
@@ -465,6 +473,7 @@
             "created_at": "2025-02-20 15:45:00"
         },
         {
+            "id": 9,
             "username": "@kakashi_model",
             "full_name": "Kakashi Hatake",
             "password": "hashed_password_415",

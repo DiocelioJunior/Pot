@@ -83,7 +83,7 @@ function mostrarModelos(modelos) {
                     <div class="icons-bottom">
                         <span class="material-symbols-outlined">chat</span>
                         <span class="material-symbols-outlined">favorite</span>
-                        <span class="material-symbols-outlined">account_circle</span>
+                        <span class="material-symbols-outlined account-icon" data-id="${modelo.id}">account_circle</span>
                     </div>
                 </div>
             </div>
@@ -92,6 +92,7 @@ function mostrarModelos(modelos) {
 
     aplicarEstilosReels();
     adicionarEventosNavbar();
+    adicionarEventosPerfil(); 
 }
 
 // 🔹 Adiciona eventos aos botões do navbar
@@ -160,4 +161,13 @@ function voltarAoTopo() {
     if (reelsContainer) {
         reelsContainer.scrollTop = 0;
     }
+}
+
+function adicionarEventosPerfil() {
+    document.querySelectorAll(".account-icon").forEach(icon => {
+        icon.addEventListener("click", function () {
+            const userId = this.getAttribute("data-id"); // Obtém o ID do modelo
+            window.location.href = `profile.html?id=${userId}`; // Redireciona para a página de perfil
+        });
+    });
 }

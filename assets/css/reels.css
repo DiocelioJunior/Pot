@@ -27,6 +27,7 @@ body {
     font-family: "Sora", serif;
     background-color: var(--background-dark);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100dvh;
@@ -100,7 +101,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: row;
-    background-color: #27272746;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(10, 10, 10, 0.3), var(--background-dark));
 }
 
 .description-bottom{
