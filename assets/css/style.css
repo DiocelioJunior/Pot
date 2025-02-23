@@ -58,14 +58,14 @@ body {
     background-repeat: repeat;
     background-size: cover;
     background-position: center;
-    max-width: 450px;
+    background-image: url();
 }
 
 .container-top {
     position: fixed;
     top: 0;
     left: 0;
-    width: 95%;
+    width: 100%;
     background: transparent !important; 
     z-index: 1000; 
     padding: 10px 20px;
@@ -100,12 +100,11 @@ body {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     background-color: #27272746;
 }
 
 .description-bottom{
-    width: 48%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;

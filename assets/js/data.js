@@ -151,9 +151,6 @@ function aplicarEstilosReels() {
                 justify-content: space-between;
                 scroll-snap-align: start;
                 box-sizing: border-box;
-                    background-repeat: repeat;
-    background-size: cover;
-    background-position: center;
             `;
         });
     }
