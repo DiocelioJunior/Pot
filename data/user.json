@@ -2,7 +2,7 @@
     "models": [
         {
             "id": 1,
-            "username": "@luffy_mose",
+            "username": "@luffy_model",
             "full_name": "Monkey D. Luffy",
             "password": "hashed_password_1234",
             "birth_date": "1997-05-05",
@@ -37,7 +37,23 @@
             "scars": "Cicatriz abaixo do olho esquerdo",
             "unique_traits": "Sorriso marcante",
             "modifications_extra": "Nada relevante.",
-            "experience": "4 anos de experiência em campanhas descontraídas.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Comercial, Lifestyle",
             "social_links": "instagram.com/luffy_model",
             "agency": "Grand Line Models",
@@ -57,7 +73,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Dragon D. - Pai - +55 11 98765-4321",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 17:15:00"
+            "created_at": "2025-02-20 17:15:00",
+            "tags": [
+                "descontraído",
+                "energético",
+                "lifestyle",
+                "aventura",
+                "fitness"
+            ]
         },
         {
             "id": 2,
@@ -71,7 +94,7 @@
             "phone": "+81 90 1234 5678",
             "email": "zoro.model@email.com",
             "address": "Rua da Espada, 2, Tokyo, Japão",
-            "city": "??? ",
+            "city": "???",
             "languages": "Japonês, Inglês",
             "personal_extra": "Interessado em artes marciais e treinamento físico.",
             "about_me": "Sou um modelo e praticante de artes marciais, buscando sempre superar meus limites e alcançar a excelência.",
@@ -96,7 +119,23 @@
             "scars": "Cicatriz no olho esquerdo",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "6 anos de experiência em campanhas esportivas.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Fitness, Comercial",
             "social_links": "instagram.com/zoro_fit",
             "agency": "Grand Line Models",
@@ -116,7 +155,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Koushirou - Mestre - +81 90 9876 5432",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 17:30:00"
+            "created_at": "2025-02-20 17:30:00",
+            "tags": [
+                "fitness",
+                "artes marciais",
+                "disciplina",
+                "esportes",
+                "treinamento"
+            ]
         },
         {
             "id": 3,
@@ -155,7 +201,23 @@
             "scars": "Nenhuma",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "5 anos de experiência em editoriais de moda.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Moda, Lifestyle",
             "social_links": "instagram.com/nami_model",
             "agency": "Grand Line Models",
@@ -175,7 +237,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Nojiko - Irmã - +81 80 9876 5432",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 17:45:00"
+            "created_at": "2025-02-20 17:45:00",
+            "tags": [
+                "moda",
+                "lifestyle",
+                "criatividade",
+                "navegação",
+                "design"
+            ]
         },
         {
             "id": 4,
@@ -214,7 +283,23 @@
             "scars": "Nenhuma",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "7 anos de experiência em campanhas lifestyle.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Lifestyle, Comercial",
             "social_links": "instagram.com/sanji_model",
             "agency": "Grand Line Models",
@@ -234,7 +319,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Zeff - Mestre - +33 6 9876 5432",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 18:00:00"
+            "created_at": "2025-02-20 18:00:00",
+            "tags": [
+                "culinária",
+                "gastronomia",
+                "elegância",
+                "lifestyle",
+                "dança"
+            ]
         },
         {
             "id": 5,
@@ -273,7 +365,23 @@
             "scars": "Nenhuma",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "2 anos de experiência em editoriais de moda.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Moda, Comercial",
             "social_links": "instagram.com/sakura_model",
             "agency": "Tokyo Models",
@@ -293,7 +401,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Mebuki Haruno - Mãe - +81 90 8765 4321",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 15:00:00"
+            "created_at": "2025-02-20 15:00:00",
+            "tags": [
+                "medicina",
+                "moda",
+                "saúde",
+                "dança",
+                "cuidados"
+            ]
         },
         {
             "id": 6,
@@ -332,7 +447,23 @@
             "scars": "Cicatrizes no rosto",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "4 anos de experiência em campanhas esportivas.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Fitness, Comercial",
             "social_links": "instagram.com/naruto_fit",
             "agency": "Konoha Models",
@@ -352,7 +483,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Kushina Uzumaki - Mãe - +81 80 1234 5678",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 15:15:00"
+            "created_at": "2025-02-20 15:15:00",
+            "tags": [
+                "fitness",
+                "artes marciais",
+                "energia",
+                "esportes",
+                "treinamento"
+            ]
         },
         {
             "id": 7,
@@ -391,7 +529,23 @@
             "scars": "Nenhuma",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "3 anos de experiência em editoriais de moda.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Moda, Comercial",
             "social_links": "instagram.com/hinata_model",
             "agency": "Konoha Models",
@@ -411,7 +565,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Hiashi Hyuga - Pai - +81 70 8765 4321",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 15:30:00"
+            "created_at": "2025-02-20 15:30:00",
+            "tags": [
+                "artes marciais",
+                "meditação",
+                "moda",
+                "disciplina",
+                "bem-estar"
+            ]
         },
         {
             "id": 8,
@@ -450,7 +611,23 @@
             "scars": "Cicatriz no ombro esquerdo",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "5 anos de experiência em campanhas esportivas.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Fitness, Comercial",
             "social_links": "instagram.com/sasuke_fit",
             "agency": "Konoha Models",
@@ -470,7 +647,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Fugaku Uchiha - Pai - +81 90 1234 5678",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 15:45:00"
+            "created_at": "2025-02-20 15:45:00",
+            "tags": [
+                "artes marciais",
+                "estratégia",
+                "fitness",
+                "foco",
+                "determinação"
+            ]
         },
         {
             "id": 9,
@@ -509,7 +693,23 @@
             "scars": "Cicatriz no olho esquerdo",
             "unique_traits": "Nenhum",
             "modifications_extra": "Nada relevante.",
-            "experience": "10 anos de experiência em campanhas esportivas.",
+            "experience": [
+                {
+                    "title": "Campanhas Esportivas",
+                    "description": "10 anos de experiência em campanhas esportivas.",
+                    "portfolio": "https://portfoliosite.com/campanhas-esportivas"
+                },
+                {
+                    "title": "Trabalho com Marcas Internacionais",
+                    "description": "Trabalhei com grandes marcas de moda internacional.",
+                    "portfolio": "https://portfoliosite.com/marcas-internacionais"
+                },
+                {
+                    "title": "Desfiles Internacionais",
+                    "description": "Participei de desfiles em várias capitais do mundo.",
+                    "portfolio": "https://portfoliosite.com/desfiles-internacionais"
+                }
+            ],
             "areas_of_work": "Fitness, Comercial",
             "social_links": "instagram.com/kakashi_fit",
             "agency": "Konoha Models",
@@ -529,7 +729,14 @@
             "contract_restrictions": "Nenhum contrato exclusivo vigente.",
             "emergency_contact": "Sakumo Hatake - Pai - +81 80 1234 5678",
             "legal_extra": "Nenhuma observação adicional.",
-            "created_at": "2025-02-20 16:00:00"
+            "created_at": "2025-02-20 16:00:00",
+            "tags": [
+                "estratégia",
+                "artes marciais",
+                "foco",
+                "determinação",
+                "literatura"
+            ]
         }
     ]
 }

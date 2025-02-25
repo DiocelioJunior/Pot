@@ -86,6 +86,10 @@ body {
     justify-content: space-between;
 }
 
+.header a{
+    text-decoration: none;
+}
+
 .header h1{
     font-size: 18px;
     color: var(--text-dark);
@@ -264,4 +268,24 @@ body {
     border: none;
     color: var(--text-dark);
     width: 30%;
+}
+
+.account-icon{
+    cursor: pointer;
+}
+
+.favorite-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.favorite-icon.liked {
+    color: red;
+}
+
+.likes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
 }
