@@ -31,6 +31,12 @@ function exibirPerfil(modelo) {
         </div>
         <div class="info-model">
             <div class="tags"></div>
+            <div class="social">
+                <a href="${modelo.social_media_links.instagram}"><i class="bi bi-instagram"></i></a>
+                <a href="${modelo.social_media_links.facebook}"><i class="bi bi-facebook"></i></a>
+                <a href="${modelo.social_media_links.whatsapp}"><i class="bi bi-whatsapp"></i></a>
+                <a href="${modelo.social_media_links.tiktok}"><i class="bi bi-tiktok"></i></a>
+            </div>
             <div class="about-me">
                 <h3>Sobre Mim</h3>
                 <p>${modelo.about_me}</p>
@@ -38,27 +44,26 @@ function exibirPerfil(modelo) {
                 <h3>Minhas Experiências</h3>
                 <ul class="experience-list"></ul> <!-- Lista de experiências -->
             </div>
+
+            <div class="gallery">
+                <h3>Galeria</h3>
+                <div class="gallery-photos"></div> <!-- Aqui entram as fotos -->
+            </div>
         </div>
     `;
 
-    // Seleciona a div de tags
+    // Seleciona a div de tags e adiciona até 3 tags
     const tagsDiv = container.querySelector(".tags");
-
-    // Verifica se o modelo tem tags e limita a exibição a no máximo 3
     if (modelo.tags && modelo.tags.length > 0) {
-        const tagsHTML = modelo.tags.slice(0, 3) // Pega no máximo 3 tags
+        tagsDiv.innerHTML = modelo.tags.slice(0, 3)
             .map(tag => `<span class="tag">${tag}</span>`)
             .join("");
-
-        tagsDiv.innerHTML = tagsHTML; // Adiciona ao HTML
     } else {
-        tagsDiv.innerHTML = "<p>Sem tags disponíveis</p>"; // Caso não tenha tags
+        tagsDiv.innerHTML = "<p>Sem tags disponíveis</p>";
     }
 
     // Seleciona a lista de experiências
     const experienceList = container.querySelector(".experience-list");
-
-    // Verifica se há experiências e as adiciona como itens de lista
     if (modelo.experience && Array.isArray(modelo.experience) && modelo.experience.length > 0) {
         modelo.experience.forEach(exp => {
             const li = document.createElement("li");
@@ -72,7 +77,18 @@ function exibirPerfil(modelo) {
     } else {
         experienceList.innerHTML = "<p>Sem experiências cadastradas</p>";
     }
+
+    // Adiciona as imagens da galeria
+    const galleryDiv = container.querySelector(".gallery-photos");
+    if (modelo.gallery_photos && modelo.gallery_photos.length > 0) {
+        galleryDiv.innerHTML = modelo.gallery_photos
+            .map(photo => `<img src="${photo}" alt="Foto de ${modelo.full_name}" class="gallery-img">`)
+            .join("");
+    } else {
+        galleryDiv.innerHTML = "<p>Sem fotos na galeria</p>";
+    }
 }
+
 
 function calcularIdade(dataNascimento) {
     const nascimento = new Date(dataNascimento);

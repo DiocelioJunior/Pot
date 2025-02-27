@@ -103,7 +103,7 @@ main{
     flex-direction: column;
     align-items: center;
     height: 100dvh;
-    min-height: 80vh;
+    min-height: 140vh;
 }
 
 .profile-card {
@@ -111,7 +111,7 @@ main{
     height: 70%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,7 +159,6 @@ main{
 
 .info-model{
     width: 100%;
-    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,10 +188,24 @@ main{
     color: var(--text-dark);
 }
 
+.social{
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.social i{
+    font-size: 18px;
+    color: var(--background-light);
+}
+
 .about-me{
     background-color: var(--background-dark-secondary);
     width: 90%;
-    margin-top: 15px;
     border-radius: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
