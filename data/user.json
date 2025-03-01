@@ -68,9 +68,10 @@
             "makeup_preferences": "Prefere maquiagem natural.",
             "main_photo": "https://i.pinimg.com/736x/c7/56/f9/c756f95fbdbac9008b2b5e04cb449bbc.jpg",
             "gallery_photos": [
-                "https://portfolio.com/luffy1.jpg",
-                "https://portfolio.com/luffy2.jpg",
-                "https://portfolio.com/luffy3.jpg"
+                "https://i.pinimg.com/236x/c9/4b/f7/c94bf7e35a8a8b4c5cc0036bf99232a7.jpg",
+                "https://i.pinimg.com/736x/d2/a3/9d/d2a39dd1459dfa071f421b353f0d48a7.jpg",
+                "https://i.pinimg.com/474x/34/83/e3/3483e33c6abb388a7a39ad8aaa70f26e.jpg",
+                "https://i.pinimg.com/736x/7d/1d/08/7d1d087b171ae4aa2bae3c498c7ccd13.jpg"
             ],
             "portfolio_video": "https://youtube.com/luffy_presentation",
             "production_extra": "Prefere fotos ao ar livre.",
@@ -89,7 +90,7 @@
         },
         {
             "id": 2,
-            "username": "@zoro_model",
+            "username": "@zoro_roro",
             "full_name": "Roronoa Zoro",
             "password": "hashed_password_5678",
             "birth_date": "1995-11-11",
@@ -99,7 +100,7 @@
             "phone": "+81 90 1234 5678",
             "email": "zoro.model@email.com",
             "address": "Rua da Espada, 2, Tokyo, Japão",
-            "city": "Tokyo",
+            "city": "???",
             "languages": "Japonês, Inglês",
             "personal_extra": "Interessado em artes marciais e treinamento físico.",
             "about_me": "Sou um modelo e praticante de artes marciais, buscando sempre superar meus limites e alcançar a excelência.",
@@ -155,9 +156,10 @@
             "makeup_preferences": "Aceita maquiagem para disfarçar brilho da pele.",
             "main_photo": "https://i.pinimg.com/736x/0b/e2/4a/0be24af48e93d54698dba3b72c8aa393.jpg",
             "gallery_photos": [
-                "https://portfolio.com/zoro1.jpg",
-                "https://portfolio.com/zoro2.jpg",
-                "https://portfolio.com/zoro3.jpg"
+                "https://i.pinimg.com/736x/18/74/2e/18742e5ca9e4aa6799527645f4617b37.jpg",
+                "https://i.pinimg.com/236x/3a/7b/5d/3a7b5d2f8d6a2926fe5eacdbb357762f.jpg",
+                "https://i.pinimg.com/736x/5c/21/6c/5c216cfad489d646a7706ca6f60d928e.jpg",
+                "https://i.pinimg.com/736x/f4/40/a0/f440a017c0b1f8f4b76fb84012698455.jpg"
             ],
             "portfolio_video": "https://youtube.com/zoro_presentation",
             "production_extra": "Prefere fotos em ambientes fechados.",
@@ -237,9 +239,10 @@
             "makeup_preferences": "Prefere maquiagem natural e leve.",
             "main_photo": "https://i.pinimg.com/736x/13/47/75/1347759acd329fd759b562bece8a2e19.jpg",
             "gallery_photos": [
-                "https://portfolio.com/nami1.jpg",
-                "https://portfolio.com/nami2.jpg",
-                "https://portfolio.com/nami3.jpg"
+                "https://i.pinimg.com/736x/71/3e/e8/713ee8640efafe98c60b2f69e061b245.jpg",
+                "https://i.pinimg.com/736x/a1/80/2f/a1802f22134aa012a869fcf7d05ec8fb.jpg",
+                "https://i.pinimg.com/736x/75/5a/6c/755a6ce1961e5b4de2fa783d0b076af7.jpg",
+                "https://i.pinimg.com/736x/29/7c/44/297c447dc7591448ea8720c620e9fe87.jpg"
             ],
             "portfolio_video": "https://youtube.com/nami_presentation",
             "production_extra": "Prefere fotos ao ar livre.",
@@ -324,9 +327,10 @@
             "makeup_preferences": "Prefere maquiagem natural e sofisticada.",
             "main_photo": "https://i.pinimg.com/736x/4a/0f/65/4a0f65276724e361724a21f685c8110e.jpg",
             "gallery_photos": [
-                "https://portfolio.com/robin1.jpg",
-                "https://portfolio.com/robin2.jpg",
-                "https://portfolio.com/robin3.jpg"
+                "https://i.pinimg.com/736x/4a/0f/65/4a0f65276724e361724a21f685c8110e.jpg",
+                "https://i.pinimg.com/474x/4a/c6/1f/4ac61f43decbe1caec69d38730415f3f.jpg",
+                "https://i.pinimg.com/236x/8b/2a/03/8b2a03a2b525b8f8e7771eef154a5b79.jpg",
+                "https://i.pinimg.com/736x/d4/25/01/d42501223f8ed11d879391674679e0ca.jpg"
             ],
             "portfolio_video": "https://youtube.com/robin_presentation",
             "production_extra": "Prefere fotos em ambientes históricos ou culturais.",
