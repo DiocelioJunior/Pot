@@ -50,7 +50,7 @@ function exibirPerfil(modelo) {
         <!-- Modal para visualizar imagens -->
         <div id="image-modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+        
                 <img id="modal-image" src="" alt="Imagem Ampliada">
             </div>
         </div>
@@ -78,34 +78,39 @@ function exibirPerfil(modelo) {
         experienceList.innerHTML = "<p>Sem experiências cadastradas</p>";
     }
 
-    // Adiciona imagens da galeria
-    const galleryDiv = container.querySelector(".gallery-photos");
-    if (modelo.gallery_photos?.length > 0) {
-        modelo.gallery_photos.forEach(photo => {
-            const img = document.createElement("img");
-            img.src = photo;
-            img.alt = `Foto de ${modelo.full_name}`;
-            img.classList.add("gallery-img");
-            galleryDiv.appendChild(img);
-        });
-    } else {
-        galleryDiv.innerHTML = "<p>Sem fotos na galeria</p>";
+ // Adiciona imagens da galeria com background
+const galleryDiv = container.querySelector(".gallery-photos");
+if (modelo.gallery_photos?.length > 0) {
+    modelo.gallery_photos.forEach(photo => {
+        const div = document.createElement("div"); // Cria uma div ao invés de uma imagem
+        div.style.backgroundImage = `url(${photo})`; // Define a imagem como background da div
+        div.classList.add("gallery-img"); // Adiciona a classe para estilizar
+        galleryDiv.appendChild(div); // Adiciona a div ao container
+    });
+} else {
+    galleryDiv.innerHTML = "<p>Sem fotos na galeria</p>";
+}
+
+// Adiciona funcionalidade de abrir imagens no modal
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("gallery-img")) {
+        const modalImage = document.getElementById("modal-image");
+        const modal = document.getElementById("image-modal");
+
+        // Extrai a URL do background da div e remove os caracteres extras
+        modalImage.src = event.target.style.backgroundImage.slice(5, -2);
+        modal.style.display = "flex";
     }
+});
 
-    // Adiciona funcionalidade de abrir imagens no modal
-    document.addEventListener("click", function (event) {
-        if (event.target.classList.contains("gallery-img")) {
-            document.getElementById("modal-image").src = event.target.src;
-            document.getElementById("image-modal").style.display = "flex";
-        }
-    });
+// Fechar modal ao clicar na imagem ou no fundo escuro
+document.getElementById("image-modal").addEventListener("click", function (event) {
+    // Fecha o modal se o clique for na imagem ou no fundo
+    if (event.target.id === "image-modal" || event.target.id === "modal-image") {
+        this.style.display = "none";
+    }
+});
 
-    // Fechar modal ao clicar fora da imagem ou no botão "X"
-    document.getElementById("image-modal").addEventListener("click", function (event) {
-        if (event.target === this || event.target.classList.contains("close")) {
-            this.style.display = "none";
-        }
-    });
 }
 
 // Função para calcular idade a partir da data de nascimento

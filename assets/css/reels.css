@@ -167,17 +167,19 @@ body {
     cursor: pointer;
 }
 
-.container-filter{
+.container-filter {
     width: 100%;
-    height: 100%;
+    height: 60vh; /* Define uma altura fixa para permitir o scroll */
     position: fixed;
     top: 40%;
     left: 0;
-    width: 100%;
     z-index: 1000; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto; /* Adiciona a rolagem vertical */
+    background: var(--background-dark); /* Opcional: melhora a aparência */
+    border-radius: 8px; /* Para um visual mais agradável */
 }
 
 .filter{

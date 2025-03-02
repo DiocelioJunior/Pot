@@ -254,30 +254,73 @@ main{
     text-decoration: none;
 }
 
+/* Estilização da galeria */
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .gallery-photos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Grid flexível */
-    gap: 10px; /* Espaço entre as fotos */
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-
+    gap: 10px;
+    width: 90%;
 }
 
-.gallery-photos img {
-    width: 100%; /* Ajusta ao tamanho da coluna */
-    height: auto;
-    border-radius: 10px; /* Cantos arredondados */
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+.gallery-img {
+    width: 180px;
+    height: 250px;
+    background-size: cover;  /* Faz a imagem de fundo cobrir toda a div */
+    background-position: center;  /* Centraliza a imagem */
+    border-radius: 8px;  /* Bordas arredondadas */
+    cursor: pointer;  /* Mostra o cursor como mãozinha */
+    transition: opacity 0.3s ease;  /* Transição suave */
 }
 
-.gallery-photos img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+.gallery-img:hover {
+    opacity: 0.8;  /* Opacidade para o efeito de hover */
 }
 
-/* Responsivo para telas menores */
-@media (max-width: 600px) {
-    .gallery-photos {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Tamanhos menores no mobile */
+#image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#image-modal .modal-content {
+    display: flex; /* Faz com que os elementos internos sigam um layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    height: 100%;
+}
+
+#modal-image {
+    width: 90vw;  /* 90% da largura da tela */
+    height: 90vh; /* 90% da altura da tela */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Media Query para telas com largura menor que 700px */
+@media (max-width: 400px) {
+    .gallery-img {
+        width: 160px;  /* Altere o tamanho desejado aqui */
+        height: 250px;  /* Altere o tamanho desejado aqui */
     }
 }
+
+
+
