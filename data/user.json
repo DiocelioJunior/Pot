@@ -2,6 +2,7 @@
     "models": [
         {
             "id": 1,
+            "category": "Moda",
             "username": "@luffy_model",
             "full_name": "Monkey D. Luffy",
             "password": "hashed_password_1234",
@@ -90,6 +91,7 @@
         },
         {
             "id": 2,
+            "category": "Fitness",
             "username": "@zoro_roro",
             "full_name": "Roronoa Zoro",
             "password": "hashed_password_5678",
@@ -178,6 +180,7 @@
         },
         {
             "id": 3,
+            "category": "Fitness",
             "username": "@nami_model",
             "full_name": "Nami",
             "password": "hashed_password_9101",
@@ -261,6 +264,7 @@
         },
         {
             "id": 10,
+            "category": "Comercial",
             "username": "@robin_nico",
             "full_name": "Nico Robin",
             "password": "hashed_password_2023",

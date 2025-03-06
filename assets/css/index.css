@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+    /* Modo Claro */
+    --background-light: #ffffff;
+    --text-light: #333333;
+    --primary-light: #007bff;
+    --secondary-light: #6c757d;
+    --highlight-light: #ffcc00;
+    
+    /* Modo Escuro */
+    --background-dark: #121212;
+    --background-dark-secondary: #252525; 
+    --text-dark: #f5f5f5;
+    --primary-dark: #1e90ff;
+    --secondary-dark: #424242;
+    --highlight-dark: #ffdd57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sora", serif;
+    background-color: var(--background-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+
+.container-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important; 
+    z-index: 1000; 
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header{
+    width: 95%;
+    height: 60px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.header h1{
+    font-size: 18px;
+    color: var(--text-dark);
+}
+
+.header span{
+    font-size: 20px;
+    color: var(--text-dark);
+}
+
+.banner{
+    margin-top: 50px;
+    width: 90%;
+}
+
+main{
+    background-color: red;
+    width: 90%;
+}
+
+.search-container{
+    background-color: bisque;
+}
+
+.model-list{
+    width: 100%;
+    background-color: blue;
+}
+
+.model-card{
+    width: 100%;
+}
+
+.model-card img{
+    width: 100%;
+}
