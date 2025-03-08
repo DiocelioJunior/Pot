@@ -10,6 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Erro ao carregar os modelos:", error));
 });
 
+function calculateAge(birthDate) {
+    const birth = new Date(birthDate);
+    const today = new Date();
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+
+    // Ajusta caso o aniversário ainda não tenha ocorrido no ano atual
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+        age--;
+    }
+    return age;
+}
+
 function displayModels(models) {
     const modelList = document.getElementById("modelList");
     modelList.innerHTML = "";
@@ -17,12 +30,22 @@ function displayModels(models) {
     models.forEach(model => {
         const modelCard = document.createElement("div");
         modelCard.classList.add("model-card");
+        modelCard.style.backgroundImage = `url(${model.main_photo})`; // Define a imagem como fundo
+
+        // Calculando a idade do modelo
+        const age = calculateAge(model.birth_date);
+
         modelCard.innerHTML = `
-            <img src="${model.main_photo}" alt="${model.full_name}">
-            <h5>${model.full_name}</h5>
-            <p>${model.short_description}</p>
-            <a href="${model.social_media_links.instagram}" target="_blank">Instagram</a>
+            <div class="overlay">
+                <h5>${model.full_name}, ${age}</h5>
+            </div>
         `;
+
+        // Adiciona evento de clique para abrir o perfil
+        modelCard.addEventListener("click", () => {
+            window.location.href = `profile.html?id=${model.id}`; // Redireciona para a página de perfil com o ID do modelo
+        });
+
         modelList.appendChild(modelCard);
     });
 }
@@ -50,8 +73,6 @@ function filterByCategory(category) {
     displayModels(filteredModels);
 }
 
-
-
 function applyFilters() {
     let filteredModels = [...modelsData];
 
@@ -70,4 +91,13 @@ function applyFilters() {
     }
 
     displayModels(filteredModels);
+}
+
+function toggleFilters() {
+    let filterContainer = document.querySelector(".filter-container");
+    if (filterContainer.style.display === "none" || filterContainer.style.display === "") {
+        filterContainer.style.display = "block";
+    } else {
+        filterContainer.style.display = "none";
+    }
 }
