@@ -127,6 +127,15 @@ main{
     margin-bottom: 20px;
 }
 
+.search-container button{
+    background-color: var(--background-dark);
+    border: none;
+}
+
+.search-container button span{
+    color: var(--text-dark);
+}
+
 .search-box {
     position: relative;
     width: 100%;
@@ -151,51 +160,89 @@ main{
 }
 
 .filter-container {
-    display: none;
+    display: none; /* Inicialmente oculto */
     position: fixed;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: var(--background-dark); /* Fundo escuro */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
-    width: 300px;
+    max-width: 100%;
+    width: 800px;
+    max-height: 80vh; /* Altura máxima */
+    height: 50%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+    -ms-overflow-style: none; /* Esconde a barra no Edge e IE */
     z-index: 1000;
+    padding-bottom: 50px;
 }
 
-.filter-container select {
+/* Esconde a barra de rolagem no Chrome, Safari e Edge */
+.filter-container::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-container button{
+    background-color: var(--background-dark-secondary);
+    height: 30px;
+    padding: 0 20px;
+    border: none;
+    color: var(--text-dark);
+    border-radius: 8px;
+}
+
+/* Estilizando os selects e inputs */
+.filter-container select,
+.filter-container input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
+    border: none;
+    background: #2a2a2a; /* Fundo escuro */
+    color: white;
+    margin-top: 5px;
+    outline: none;
 }
 
-.filter-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Bordas inferiores para inputs */
+.filter-container input {
+    border-bottom: 1px solid #ffffff88; /* Linha branca sutil */
+    background: #2a2a2a; /* Fundo escuro */
+    text-align: right;
+}
+
+/* Estilização dos rótulos */
+.filter-container label {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Botão de filtrar */
+.filter-container .filter-btn {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-.filter-btn {
-    background-color: var(--background-dark);
+    background: #333;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
     transition: 0.3s;
+    margin-top: 15px;
+    text-align: center;
 }
 
+.filter-container .filter-btn:hover {
+    background: #444;
+}
+
+/* Fechar o filtro */
 .close-filter {
     background: red;
     color: white;
@@ -204,6 +251,7 @@ main{
     border-radius: 5px;
     width: 100%;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .category-container {

@@ -48,6 +48,9 @@
 
             <!-- Barra de Filtros (Oculta por padrão) -->
             <div class="filter-container" id="filterContainer">
+
+                <button onclick="clearFilters()">Limpar Filtros</button>
+                
                 <div>
                     <label for="filterGender">Gênero:</label>
                     <select id="filterGender">
@@ -56,6 +59,17 @@
                         <option value="Feminino">Feminino</option>
                     </select>
                 </div>
+
+                <div>
+                    <label for="filterCity">Cidade:</label>
+                    <input type="text" id="filterCity" placeholder="Ex: São Paulo">
+                </div>
+
+                <div>
+                    <label for="filterLanguages">Idiomas:</label>
+                    <input type="text" id="filterLanguages" placeholder="Ex: Português, Inglês">
+                </div>
+
                 <div>
                     <label for="filterBodyType">Tipo de Corpo:</label>
                     <select id="filterBodyType">
@@ -64,6 +78,7 @@
                         <option value="Mesomorfo">Mesomorfo</option>
                     </select>
                 </div>
+
                 <div>
                     <label for="filterEyeColor">Cor dos Olhos:</label>
                     <select id="filterEyeColor">
@@ -73,15 +88,133 @@
                         <option value="Preto">Preto</option>
                     </select>
                 </div>
-                <button onclick="applyFilters()">Filtrar</button>
+
+                <div>
+                    <label for="filterHairColor">Cor do Cabelo:</label>
+                    <select id="filterHairColor">
+                        <option value="">Todas</option>
+                        <option value="Preto">Preto</option>
+                        <option value="Castanho">Castanho</option>
+                        <option value="Loiro">Loiro</option>
+                        <option value="Ruivo">Ruivo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterHairType">Tipo de Cabelo:</label>
+                    <select id="filterHairType">
+                        <option value="">Todos</option>
+                        <option value="Liso">Liso</option>
+                        <option value="Ondulado">Ondulado</option>
+                        <option value="Cacheado">Cacheado</option>
+                        <option value="Crespo">Crespo</option>
+                        <option value="Espetado">Espetado</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterFaceShape">Formato do Rosto:</label>
+                    <select id="filterFaceShape">
+                        <option value="">Todos</option>
+                        <option value="Oval">Oval</option>
+                        <option value="Redondo">Redondo</option>
+                        <option value="Quadrado">Quadrado</option>
+                        <option value="Triangular">Triangular</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterDistinctiveFeatures">Características Marcantes:</label>
+                    <input type="text" id="filterDistinctiveFeatures"
+                        placeholder="Ex: Cicatriz no olho, Sorriso marcante">
+                </div>
+
+                <div>
+                    <label for="filterTattoos">Tatuagens:</label>
+                    <select id="filterTattoos">
+                        <option value="">Todas</option>
+                        <option value="Nenhuma">Nenhuma</option>
+                        <option value="Poucas">Poucas</option>
+                        <option value="Muitas">Muitas</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterPiercings">Piercings:</label>
+                    <select id="filterPiercings">
+                        <option value="">Todos</option>
+                        <option value="Nenhum">Nenhum</option>
+                        <option value="Poucos">Poucos</option>
+                        <option value="Muitos">Muitos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterCategory">Categoria:</label>
+                    <select id="filterCategory">
+                        <option value="">Todas</option>
+                        <option value="Moda">Moda</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Comercial">Comercial</option>
+                        <option value="Lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filterExperience">Anos de Experiência:</label>
+                    <input type="number" id="filterExperience" placeholder="Ex: 5">
+                </div>
+
+                <div>
+                    <label for="filterAreasOfWork">Áreas de Atuação:</label>
+                    <input type="text" id="filterAreasOfWork" placeholder="Ex: Comercial, Lifestyle">
+                </div>
+
+                <div>
+                    <label for="filterExtraSkills">Habilidades Extras:</label>
+                    <input type="text" id="filterExtraSkills" placeholder="Ex: Dança, Luta">
+                </div>
+
+                <div>
+                    <label for="filterMinHeight">Altura (Min):</label>
+                    <input type="number" id="filterMinHeight" placeholder="Ex: 1.60">
+                </div>
+
+                <div>
+                    <label for="filterMaxHeight">Altura (Max):</label>
+                    <input type="number" id="filterMaxHeight" placeholder="Ex: 1.90">
+                </div>
+
+                <div>
+                    <label for="filterMinWeight">Peso (Min):</label>
+                    <input type="number" id="filterMinWeight" placeholder="Ex: 50">
+                </div>
+
+                <div>
+                    <label for="filterMaxWeight">Peso (Max):</label>
+                    <input type="number" id="filterMaxWeight" placeholder="Ex: 90">
+                </div>
+
+                <div>
+                    <label for="filterAvailability">Disponibilidade:</label>
+                    <select id="filterAvailability">
+                        <option value="">Todas</option>
+                        <option value="Nacional">Apenas Nacional</option>
+                        <option value="Internacional">Disponível Internacionalmente</option>
+                    </select>
+                </div>
             </div>
+
 
             <!-- Barra de Categorias com Scroll Invisível -->
             <div class="category-container">
                 <div class="category-scroll">
-                    <button class="category-btn" onclick="filterByCategory('todos')"><span class="material-symbols-outlined">apps</span></button>
-                    <button class="category-btn" onclick="filterByCategory('Moda')"><span class="material-symbols-outlined">apparel</span></button>
-                    <button class="category-btn" onclick="filterByCategory('Fitness')"><span class="material-symbols-outlined">exercise</span></button>
+                    <button class="category-btn" onclick="filterByCategory('todos')"><span
+                            class="material-symbols-outlined">apps</span></button>
+                    <button class="category-btn" onclick="filterByCategory('Moda')"><span
+                            class="material-symbols-outlined">apparel</span></button>
+                    <button class="category-btn" onclick="filterByCategory('Fitness')"><span
+                            class="material-symbols-outlined">exercise</span></button>
                 </div>
             </div>
 
@@ -94,7 +227,7 @@
 
     </div>
 
-    <script src="./assets/js/teste.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
