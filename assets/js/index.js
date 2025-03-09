@@ -16,7 +16,6 @@ function calculateAge(birthDate) {
     let age = today.getFullYear() - birth.getFullYear();
     const monthDiff = today.getMonth() - birth.getMonth();
 
-    // Ajusta caso o aniversário ainda não tenha ocorrido no ano atual
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
         age--;
     }
@@ -30,9 +29,8 @@ function displayModels(models) {
     models.forEach(model => {
         const modelCard = document.createElement("div");
         modelCard.classList.add("model-card");
-        modelCard.style.backgroundImage = `url(${model.main_photo})`; // Define a imagem como fundo
+        modelCard.style.backgroundImage = `url(${model.main_photo})`;
 
-        // Calculando a idade do modelo
         const age = calculateAge(model.birth_date);
 
         modelCard.innerHTML = `
@@ -41,9 +39,8 @@ function displayModels(models) {
             </div>
         `;
 
-        // Adiciona evento de clique para abrir o perfil
         modelCard.addEventListener("click", () => {
-            window.location.href = `profile.html?id=${model.id}`; // Redireciona para a página de perfil com o ID do modelo
+            window.location.href = `profile.html?id=${model.id}`;
         });
 
         modelList.appendChild(modelCard);
@@ -52,30 +49,32 @@ function displayModels(models) {
 
 function searchModels() {
     const searchValue = document.getElementById("searchInput").value.toLowerCase();
-    
-    const filteredModels = modelsData.filter(model =>
-        model.full_name.toLowerCase().includes(searchValue) ||
-        model.username.toLowerCase().includes(searchValue)
-    );
+
+    const filteredModels = modelsData.filter(model => {
+        return (
+            model.full_name.toLowerCase().includes(searchValue) ||
+            model.username.toLowerCase().includes(searchValue) ||
+            model.city.toLowerCase().includes(searchValue) ||
+            model.areas_of_work.toLowerCase().includes(searchValue) ||
+            model.tags.some(tag => tag.toLowerCase().includes(searchValue)) // Pesquisa nas tags
+        );
+    });
 
     displayModels(filteredModels);
 }
 
 function filterByCategory(category) {
     let filteredModels;
-
     if (category === "todos") {
         filteredModels = modelsData;
     } else {
         filteredModels = modelsData.filter(model => model.category === category);
     }
-
     displayModels(filteredModels);
 }
 
-// Função para aplicar os filtros
 function applyFilters() {
-    let filteredModels = [...modelsData];  // Cria uma cópia dos dados originais
+    let filteredModels = [...modelsData];
 
     // Gênero
     const gender = document.getElementById("filterGender").value;
@@ -206,14 +205,13 @@ document.querySelectorAll('.filter-container input, .filter-container select').f
     element.addEventListener('input', applyFilters);
 });
 
-
 // Função para abrir/fechar o filtro ao clicar no botão
 function toggleFilters() {
     const filterContainer = document.getElementById('filterContainer');
     if (filterContainer.style.display === 'none' || filterContainer.style.display === '') {
-        filterContainer.style.display = 'block';  // Exibe o container
+        filterContainer.style.display = 'block';
     } else {
-        filterContainer.style.display = 'none';  // Oculta o container
+        filterContainer.style.display = 'none';
     }
 }
 
@@ -222,29 +220,18 @@ document.addEventListener('click', function(event) {
     const filterContainer = document.getElementById('filterContainer');
     const filterToggleButton = document.querySelector('.filter-btn');
 
-    // Verifica se o clique foi fora do container de filtro e do botão de filtro
     if (!filterContainer.contains(event.target) && !filterToggleButton.contains(event.target)) {
-        // Fecha o filtro se estiver visível
         if (filterContainer.style.display === 'block') {
-            filterContainer.style.display = 'none';  // Fecha o container
+            filterContainer.style.display = 'none';
         }
     }
 });
 
 // Função para limpar todos os filtros
 function clearFilters() {
-    // Limpa os valores dos campos de entrada e seleção
     document.querySelectorAll('.filter-container input, .filter-container select').forEach((element) => {
-        if (element.type === 'number') {
-            element.value = '';  // Limpa campos numéricos
-        } else {
-            element.value = '';  // Limpa outros campos (texto, seleção)
-        }
+        element.value = '';  // Limpa todos os campos
     });
 
-    // Chama a função applyFilters para atualizar a exibição após a limpeza
-    applyFilters();
+    applyFilters();  // Atualiza a exibição após a limpeza
 }
-
-
-
